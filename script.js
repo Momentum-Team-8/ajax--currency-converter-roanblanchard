@@ -34,3 +34,5 @@ const currencies = [
   'MYR'
 ]
 
+
+const url = 'http://api.exchangeratesapi.io/v1/latest?access_key=377bbb2ff88e0f40c21d33689b52271e'
