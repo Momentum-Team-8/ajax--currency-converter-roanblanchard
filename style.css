@@ -16,4 +16,20 @@ body {
   display: flex;
   width: 301px;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.second-element {
+  display: flex;
+  width: 301px;
+  justify-content: space-evenly;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70px;
 }

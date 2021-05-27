@@ -39,6 +39,7 @@ const url = 'http://api.exchangeratesapi.io/v1/latest?access_key=377bbb2ff88e0f4
 const rootElement = document.querySelector('.container')
 
 const firstElement = document.querySelector('.first-element')
+const secondElement = document.querySelector('.second-element')
 
 
 fetch(url)
@@ -86,4 +87,22 @@ fetch(url)
       curList2.appendChild(optionItem)
     }
     firstElement.appendChild(curList2)
+
+
+    let input = document.createElement('input')
+    secondElement.appendChild(input)
+
+    let p3 = document.createElement('p')
+    p3.innerText = " = "
+    secondElement.appendChild(p3)
+
+    let p4 = document.createElement('p')
+    p4.innerText = "  "
+    secondElement.appendChild(p4)
+
+    let submit = document.createElement('input')
+    submit.type = "submit"
+    submit.value = "Convert!"
+    secondElement.appendChild(submit)
+
   })
