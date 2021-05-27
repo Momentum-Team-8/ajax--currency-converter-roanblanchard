@@ -7,3 +7,13 @@
 body {
   font-family: Helvetica, sans-serif;
 }
+
+.container {
+  flex-direction: column-reverse;
+}
+
+.first-element {
+  display: flex;
+  width: 301px;
+  flex-wrap: wrap;
+}

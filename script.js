@@ -38,6 +38,8 @@ const currencies = [
 const url = 'http://api.exchangeratesapi.io/v1/latest?access_key=377bbb2ff88e0f40c21d33689b52271e'
 const rootElement = document.querySelector('.container')
 
+const firstElement = document.querySelector('.first-element')
+
 
 fetch(url)
   // fetch will return a JS promise as a response
@@ -50,17 +52,38 @@ fetch(url)
     // NOW in this second .then() callback, we have json-formatted data we can use!
     // it's a good idea to console.log the data so you can see it!
     console.log(data)
-    let h2 = document.createElement('h2')
-    h2.innerText = data.base
-    rootElement.appendChild(h2)
+    let h2 = document.createElement('h1')
+    h2.innerText = 'Currency Converter'
+    firstElement.appendChild(h2)
 
+    let p1 = document.createElement('p')
+    p1.innerText = "Convert from "
+    firstElement.appendChild(p1)
 
+    // drop downs and text
     let curList = document.createElement('select')
-    rootElement.appendChild(curList)
+    // let dropDown = document.createElement('p')
     for (let cur of currencies) {
       const optionItem = document.createElement('option')
       optionItem.value = cur
-      optionItem.innerText = cur
+      optionItem.textContent = cur
       curList.appendChild(optionItem)
     }
+    // dropDown.innerHTML = "Convert from " +  + "to " + 
+
+    firstElement.appendChild(curList)
+
+    let p2 = document.createElement('p')
+    p2.innerText = " to "
+    firstElement.appendChild(p2)
+
+    let curList2 = document.createElement('select')
+    // let dropDown = document.createElement('p')
+    for (let cur of currencies) {
+      const optionItem = document.createElement('option')
+      optionItem.value = cur
+      optionItem.textContent = cur
+      curList2.appendChild(optionItem)
+    }
+    firstElement.appendChild(curList2)
   })
